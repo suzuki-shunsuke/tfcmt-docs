@@ -9,7 +9,7 @@ const config = {
   title: 'tfcmt',
   tagline: 'Fork of mercari/tfnotify, enhancing tfnotify in many ways including Terraform >= v0.15 support and advanced formatting options',
   url: 'https://suzuki-shunsuke.github.io',
-  baseUrl: '/tfcmt/docs/',
+  baseUrl: '/tfcmt/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
