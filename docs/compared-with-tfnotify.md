@@ -78,7 +78,7 @@ tfcmt doesn't support the following platforms.
 Because we don't use these platforms and it is hard to maintain them.
 By removing them, the code makes simple.
 
-By [Custom Environment Variable Definition](https://github.com/suzuki-shunsuke/tfcmt/blob/main/docs/ENVIRONMENT_VARIABLE.md#custom-environment-variable-definition), you can support CI platform which tfcmt doesn't support natively.
+By [Custom Environment Variable Definition](environment-variable#custom-environment-variable-definition), you can support CI platform which tfcmt doesn't support natively.
 
 ## Breaking Change: Remove `fmt` command
 
@@ -100,7 +100,7 @@ Not `{.,}tfnotify.y{,a}ml` but `{.,}tfcmt.y{,a}ml`.
 * `notifier` was removed
 * structure of `ci` was changed
 
-Please see [Configuration](CONFIGURATION.md) too.
+Please see [Configuration](config) too.
 
 ## Breaking Change: Command usage is changed
 
@@ -367,7 +367,7 @@ You can omit the configuration `notifier.github.token`.
 
 You can complement the parameters like `pr` and `repo` on the other platform like Travis CI and Jenkins with Custom Environment Variable Definition.
 
-Please see [here](ENVIRONMENT_VARIABLE.md#custom-environment-variable-definition).
+Please see [here](environment-variable#custom-environment-variable-definition).
 
 ## Feature: Syntax Highlight
 
