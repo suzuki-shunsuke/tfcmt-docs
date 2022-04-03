@@ -8,7 +8,7 @@ sidebar_position: 100
 [![GitHub last commit](https://img.shields.io/github/last-commit/suzuki-shunsuke/tfcmt.svg)](https://github.com/suzuki-shunsuke/tfcmt)
 [![License](http://img.shields.io/badge/license-mit-blue.svg?style=flat-square)](https://raw.githubusercontent.com/suzuki-shunsuke/tfcmt/master/LICENSE)
 
-Fork of [mercari/tfnotify](https://github.com/mercari/tfnotify), enhancing tfnotify in many ways including Terraform >= v0.15 support and advanced formatting options.
+[tfcmt](https://github.com/suzuki-shunsuke/tfcmt) is a fork of [mercari/tfnotify](https://github.com/mercari/tfnotify), enhancing tfnotify in many ways including Terraform >= v0.15 support and advanced formatting options.
 
 tfcmt is a CLI tool to improve the experience of CI of Terraform.
 By posting the result of `terraform plan` and `terraform apply` to GitHub Pull Requests as a comment,

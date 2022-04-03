@@ -42,6 +42,7 @@ tfcmt isn't compatible with tfnotify.
   * [Add --log-level option and log.level configuration and output structured log with logrus](#feature-add---log-level-option-and-loglevel-configuration-and-output-structured-log-with-logrus)
   * [Don't recreate labels](#feature-dont-recreate-labels)
   * [--version option and `version` command](#feature---version-option-and-version-command)
+  * [Omit too long text in the template function `wrapCode` automatically](https://github.com/suzuki-shunsuke/tfcmt/releases/tag/v3.1.0)
 * Fixes
   * [Post a comment even if it failed to update labels](#fix-post-a-comment-even-if-it-failed-to-update-labels)
 * Others
