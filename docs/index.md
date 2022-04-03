@@ -59,6 +59,8 @@ Combined with [github-comment](https://github.com/suzuki-shunsuke/github-comment
 
 ## License
 
+[LICENSE](https://github.com/suzuki-shunsuke/tfcmt/blob/main/LICENSE)
+
 ### License of original code
 
 This is a fork of [mercari/tfnotify](https://github.com/mercari/tfnotify), so about the origincal license, please see https://github.com/mercari/tfnotify#license .
