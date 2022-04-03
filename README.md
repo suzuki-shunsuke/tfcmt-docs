@@ -2,6 +2,8 @@
 
 Document of [tfcmt](https://github.com/suzuki-shunsuke/tfcmt) powered by [Docusaurus v2](https://docusaurus.io/).
 
+https://suzuki-shunsuke.github.io/tfcmt/docs/
+
 ## Run at localhost
 
 ```console
