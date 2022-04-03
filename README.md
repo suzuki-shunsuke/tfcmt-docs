@@ -2,7 +2,7 @@
 
 Document of [tfcmt](https://github.com/suzuki-shunsuke/tfcmt) powered by [Docusaurus v2](https://docusaurus.io/).
 
-https://suzuki-shunsuke.github.io/tfcmt/docs/
+https://suzuki-shunsuke.github.io/tfcmt/
 
 ## Run at localhost
 
