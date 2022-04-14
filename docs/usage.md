@@ -6,7 +6,7 @@ sidebar_position: 600
 
 ```console
 $ tfcmt --version
-tfcmt version 0.7.0
+tfcmt version 3.1.1 (6e6358b49ce95b52f3287c4376bf66a3c7bc13e8)
 ```
 
 ```console
@@ -18,7 +18,7 @@ USAGE:
    tfcmt [global options] command [command options] [arguments...]
 
 VERSION:
-   0.7.0
+   3.1.1 (6e6358b49ce95b52f3287c4376bf66a3c7bc13e8)
 
 COMMANDS:
    plan     Run terraform plan and post a comment to GitHub commit or pull request
@@ -27,7 +27,6 @@ COMMANDS:
    help, h  Shows a list of commands or help for one command
 
 GLOBAL OPTIONS:
-   --ci value         name of CI to run tfcmt
    --owner value      GitHub Repository owner name
    --repo value       GitHub Repository name
    --sha value        commit SHA (revision)
@@ -35,14 +34,14 @@ GLOBAL OPTIONS:
    --log-level value  log level
    --pr value         pull request number (default: 0)
    --config value     config path
-   --var value        template variables. The format of value is '<name>:<value>'
+   --var value        template variables. The format of value is '<name>:<value>'  (accepts multiple inputs)
    --help, -h         show help (default: false)
    --version, -v      print the version (default: false)
 ```
 
 ### -var option
 
-tfcmt supports to pass variables by `-var` option.
+tfcmt supports passing variables by `-var` option.
 The format of the value should be `<name>:<value>`.
 
 ```console
@@ -75,7 +74,7 @@ USAGE:
 e.g.
 
 ```console
-$ tfcmt plan -- terraform plan
+$ tfcmt plan -- terraform plan -no-color
 ```
 
 ## tfcmt apply
@@ -92,5 +91,17 @@ USAGE:
 e.g.
 
 ```console
-$ tfcmt apply -- terraform apply -auto-approve
+$ tfcmt apply -- terraform apply -auto-approve -no-color
+```
+
+## :warning: Terraform's `-no-color` option is required to parse the result properly
+
+Please set [Terraform's -no-color option](https://www.terraform.io/cli/commands/plan#no-color), otherwise tfcmt may fail to parse the result.
+
+```console
+$ tfcmt plan -- terraform plan -no-color
+```
+
+```console
+$ tfcmt apply -- terraform apply -auto-approve -no-color
 ```
