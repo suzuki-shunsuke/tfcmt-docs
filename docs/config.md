@@ -50,6 +50,8 @@ And the following functions can be used.
 `wrapCode` wraps a test with <code>\`\`\`</code> or `<pre><code>`.
 If the text includes <code>\`\`\`</code>, the text wraps with `<pre><code>`, otherwise the text wraps with <code>\`\`\`</code> and the text isn't HTML escaped.
 
+`wrapCode` omits too long text. ref. https://github.com/suzuki-shunsuke/tfcmt/releases/tag/v3.1.0
+
 ## Default Configuration
 
 ```yaml

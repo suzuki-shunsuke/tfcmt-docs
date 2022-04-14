@@ -27,6 +27,8 @@ On the supported CI platform, the following parameters are complemented by the b
 
 This feature is implemented by [go-ci-env](https://github.com/suzuki-shunsuke/go-ci-env).
 
+:warning: You can also use tfcmt on other platform with CLI flags or Custom Environment Variable Definition.
+
 ## Custom Environment Variable Definition
 
 You can complement the above parameters on the other platform like Travis CI and Jenkins with Custom Environment Variable Definition.
