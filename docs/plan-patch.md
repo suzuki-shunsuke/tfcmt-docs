@@ -39,3 +39,14 @@ If the comment isn't patched expectedly, please set `-log-level=debug`.
 ```console
 $ tfcmt -log-level=debug plan -patch -- terraform plan -no-color
 ```
+
+### :warning: Note to use  tfcmt plan's patch option with github-comment hide
+
+If you hide comments by [github-comment hide](https://suzuki-shunsuke.github.io/github-comment/hide) and enable tfcmt plan's patch option,
+you should be careful not to hide tfcmt plan's comments.
+
+There are some ways to fix the problem.
+
+1. Stop using `github-comment hide`
+1. Fix github-comment hide's condition and exclude tfcmt's comments from the target ofgithub-comment hide
+1. Run github-comment hide after tfcmt
