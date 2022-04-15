@@ -4,9 +4,9 @@ sidebar_position: 600
 
 # Patch `tfcmt plan` comment
 
-tfcmt >= v3.2.0
+tfcmt >= [v3.2.0](https://github.com/suzuki-shunsuke/tfcmt/releases/tag/v3.2.0)
 
-[#199](https://github.com/suzuki-shunsuke/tfcmt/issues/199) [#245](https://github.com/suzuki-shunsuke/tfcmt/issues/245) [#249](https://github.com/suzuki-shunsuke/tfcmt/issues/249)
+[#199](https://github.com/suzuki-shunsuke/tfcmt/issues/199) [#245](https://github.com/suzuki-shunsuke/tfcmt/issues/245) [#248](https://github.com/suzuki-shunsuke/tfcmt/issues/248) [#249](https://github.com/suzuki-shunsuke/tfcmt/issues/249)
 
 The option `-patch` has been added to `tfcmt plan` command.
 
