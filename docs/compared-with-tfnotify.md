@@ -24,6 +24,7 @@ tfcmt isn't compatible with tfnotify.
   * [Update labels by default](#breaking-change-update-pull-request-labels-by-default)
 * Features
   * [Support Terraform >= v0.15](#feature-support-terraform--v015)
+  * [Support patching the comment of `tfcmt plan`](#feature-support-patching-the-comment-of-tfcmt-plan)
   * [Add template variables](#feature-add-template-variables)
   * [Post a comment when it failed to parse the result](#feature-post-a-comment-when-it-failed-to-parse-the-result)
   * [Find the configuration file recursively](#feature-find-the-configuration-file-recursively)
@@ -223,6 +224,10 @@ No changes. Your infrastructure matches the configuration.
 ```
 
 tfcmt supports both messages.
+
+## Feature: Support patching the comment of `tfcmt plan`
+
+Please see [Patch `tfcmt plan` comment](plan-patch).
 
 ## Feature: Add template variables
 
