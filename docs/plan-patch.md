@@ -4,9 +4,15 @@ sidebar_position: 600
 
 # Patch `tfcmt plan` comment
 
-tfcmt >= [v3.2.0](https://github.com/suzuki-shunsuke/tfcmt/releases/tag/v3.2.0)
+tfcmt >= [v3.2.0](https://github.com/suzuki-shunsuke/tfcmt/releases/tag/v3.2.0) | [#199](https://github.com/suzuki-shunsuke/tfcmt/issues/199) [#245](https://github.com/suzuki-shunsuke/tfcmt/issues/245) [#248](https://github.com/suzuki-shunsuke/tfcmt/issues/248) [#249](https://github.com/suzuki-shunsuke/tfcmt/issues/249)
 
-[#199](https://github.com/suzuki-shunsuke/tfcmt/issues/199) [#245](https://github.com/suzuki-shunsuke/tfcmt/issues/245) [#248](https://github.com/suzuki-shunsuke/tfcmt/issues/248) [#249](https://github.com/suzuki-shunsuke/tfcmt/issues/249)
+Instead of creating a new comment, you can update existing comment. This is useful to keep the pull request comments clean.
+
+![image](https://user-images.githubusercontent.com/13323303/164969354-02bdd49a-547e-4951-9262-033ec5b4db11.png)
+
+--
+
+![image](https://user-images.githubusercontent.com/13323303/164969385-355e801e-3d58-4b75-9657-0bcc10da8d12.png)
 
 The option `-patch` has been added to `tfcmt plan` command.
 

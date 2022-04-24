@@ -34,6 +34,15 @@ Combined with [github-comment](https://github.com/suzuki-shunsuke/github-comment
 
 ![image](https://user-images.githubusercontent.com/13323303/136240241-2f2e7455-8a2e-4fce-a91a-c8bab4d73510.png)
 
+Instead of hiding stale comments and creating a new comment, you can update existing comment. This is useful to keep the pull request comments clean.
+For detail, please see [Patch `tfcmt plan` comment](plan-patch).
+
+![image](https://user-images.githubusercontent.com/13323303/164969354-02bdd49a-547e-4951-9262-033ec5b4db11.png)
+
+--
+
+![image](https://user-images.githubusercontent.com/13323303/164969385-355e801e-3d58-4b75-9657-0bcc10da8d12.png)
+
 ## Index
 
 - [Install](install)
