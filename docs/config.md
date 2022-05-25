@@ -253,7 +253,11 @@ Compared with `CombinedOutput`, you can make the result of `terraform plan` clea
 
 ![image](https://user-images.githubusercontent.com/13323303/126020762-68f99375-f860-4c66-964e-6dd0c9578cb1.png)
 
-### Example configuration
+## GitHub Enterprise Support
+
+Please see [GitHub Enterprise Support](github-enterprise).
+
+## Example configuration
 
 ```yaml
 ---
