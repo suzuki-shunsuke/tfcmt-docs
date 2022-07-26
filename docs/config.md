@@ -261,6 +261,8 @@ Please see [GitHub Enterprise Support](github-enterprise).
 
 ```yaml
 ---
+repo_owner: suzuki-shunsuke
+repo_name: tfcmt
 templates:
   changed_result: |
     {{if .ChangedResult}}
