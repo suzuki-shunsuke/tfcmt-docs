@@ -111,7 +111,7 @@ The configuration file is optional.
 tfcmt provides the good default configuration.
 You can also customize the configuration with configuration file if needed.
 
-Please see [Configuration](config) too.
+Please see [Configuration](config.md) too.
 
 ### List of changed resources
 

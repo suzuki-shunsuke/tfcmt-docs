@@ -196,11 +196,11 @@ terraform:
 
 ## Custom Environment Variable Definition
 
-Please see [Custom Environment Variable Definition](environment-variable#custom-environment-variable-definition).
+Please see [Custom Environment Variable Definition](environment-variable.md#custom-environment-variable-definition).
 
 ## Embed metadata in comments
 
-Please see [Embed metadata in comments](embedded-metadata).
+Please see [Embed metadata in comments](embedded-metadata.md).
 
 ## Variables `ChangedResult`, `ChangeOutsideTerraform`, and `Warning`
 
