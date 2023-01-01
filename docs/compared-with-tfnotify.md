@@ -80,7 +80,9 @@ tfcmt doesn't support the following platforms.
 Because we don't use these platforms and it is hard to maintain them.
 By removing them, the code makes simple.
 
-By [Custom Environment Variable Definition](environment-variable#custom-environment-variable-definition), you can support CI platform which tfcmt doesn't support natively.
+:::info
+For GitLab Users, please check [hirosassa/tfcmt-gitlab](https://github.com/hirosassa/tfcmt-gitlab), which is a fork of tfcmt for GitLab.
+:::
 
 ## Breaking Change: Remove `fmt` command
 
@@ -450,9 +452,17 @@ On the other hand, tfcmt supports specifing these parameters by command-line opt
 
 e.g.
 
-```
+```console
 $ tfcmt -owner suzuki-shunsuke -repo tfcmt -pr 3 -- terraform plan
 ```
+
+## Feature: Get pull request number from commit hash
+
+[v3.2.2](https://github.com/suzuki-shunsuke/tfcmt/releases/tag/v3.2.2) [#288](https://github.com/suzuki-shunsuke/tfcmt/issues/288)
+
+## Feature: Create comments to pull request instead of commit
+
+[v3.4.0](https://github.com/suzuki-shunsuke/tfcmt/releases/tag/v3.4.0) [#387](https://github.com/suzuki-shunsuke/tfcmt/issues/387) [#390](https://github.com/suzuki-shunsuke/tfcmt/issues/390)
 
 ## Feature: Get pull request number from CI_INFO_PR_NUMBER
 
