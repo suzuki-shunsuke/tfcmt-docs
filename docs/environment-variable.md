@@ -63,34 +63,6 @@ repo_name: tfcmt
 
 ## Custom Environment Variable Definition
 
-You can complement the above parameters on the other platform like Travis CI and Jenkins with Custom Environment Variable Definition.
-
-tfcmt.yaml
-
-```yaml
-ci:
-  pr:
-  - type: envsubst
-    value: "${PR_NUMBER}"
-  sha:
-  - type: envsubst
-    value: "${SHA}"
-  link:
-  - type: envsubst
-    value: "${LINK}"
-  owner:
-  - type: envsubst
-    value: "${REPO_OWNER}"
-  repo:
-  - type: envsubst
-    value: "${REPO_NAME}"
-  vars:
-    yoo: # the variable "yoo" is added to ".Vars"
-    - type: template
-      value: '{{env "YOO"}}'
-```
-
-The following types are supported.
-
-* `envsubst`: [drone/envsubst#EvalEnv](https://pkg.go.dev/github.com/drone/envsubst#EvalEnv)
-* `template`: Go's [text/template](https://golang.org/pkg/text/template/) with [sprig functions](http://masterminds.github.io/sprig/)
+:::caution
+This feature was removed from [v4.0.0](https://github.com/suzuki-shunsuke/tfcmt/releases/tag/v4.0.0) for security reason.
+:::

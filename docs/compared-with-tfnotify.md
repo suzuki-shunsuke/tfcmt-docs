@@ -104,7 +104,7 @@ Not `{.,}tfnotify.y{,a}ml` but `{.,}tfcmt.y{,a}ml`.
 * `notifier` was removed
 * structure of `ci` was changed
 
-Please see [Configuration](config) too.
+Please see [Configuration](config.md) too.
 
 ## Breaking Change: Command usage is changed
 
@@ -229,7 +229,7 @@ tfcmt supports both messages.
 
 ## Feature: Support patching the comment of `tfcmt plan`
 
-Please see [Patch `tfcmt plan` comment](plan-patch).
+Please see [Patch `tfcmt plan` comment](plan-patch.md).
 
 ## Feature: Add template variables
 
@@ -375,7 +375,7 @@ You can omit the configuration `notifier.github.token`.
 
 You can complement the parameters like `pr` and `repo` on the other platform like Travis CI and Jenkins with Custom Environment Variable Definition.
 
-Please see [here](environment-variable#custom-environment-variable-definition).
+Please see [here](environment-variable.md#custom-environment-variable-definition).
 
 ## Feature: Syntax Highlight
 
