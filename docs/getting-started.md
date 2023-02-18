@@ -143,7 +143,6 @@ The following resources are listed.
 By `tfcmt apply` command, you can post the result of `terraform apply`
 
 ```console
-# -auto-approve is required. Otherwise, tfcmt apply doesn't work well.
 $ tfcmt -owner "$OWNER" -repo "$REPO" -pr "$PR_NUMBER" apply -- terraform apply -auto-approve
 null_resource.foo: Creating...
 null_resource.foo: Creation complete after 0s [id=459501600381334523]
@@ -216,6 +215,7 @@ But on the following CI platform, tfcmt gets these parameters from the built in 
 * CircleCI
 * Drone
 * GitHub Actions
+* [Google Cloud Build](environment-variable.md#google-cloud-build-support)
 
 AS IS
 

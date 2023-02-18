@@ -137,15 +137,19 @@ terraform:
     when_add_or_update_only:
       label: "{{if .Vars.target}}{{.Vars.target}}/{{end}}add-or-update"
       label_color: 1d76db # blue
+      # disable_label: false
     when_destroy:
       label: "{{if .Vars.target}}{{.Vars.target}}/{{end}}destroy"
       label_color: d93f0b # red
+      # disable_label: false
     when_no_changes:
       label: "{{if .Vars.target}}{{.Vars.target}}/{{end}}no-changes"
       label_color: 0e8a16 # green
+      # disable_label: false
     when_plan_error:
       label:
       label_color:
+      # disable_label: false
     when_parse_error:
       template: |
         {{template "plan_title" .}}
