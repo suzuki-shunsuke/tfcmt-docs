@@ -4,6 +4,11 @@ sidebar_position: 500
 
 # Compared with tfnotify v0.7.0
 
+:::caution
+This page isn't fully maintained.
+There are some differences not described in this page.
+:::
+
 tfcmt is a fork of [mercari/tfnotify v0.7.0](https://github.com/mercari/tfnotify/releases/tag/v0.7.0).
 
 tfcmt isn't compatible with tfnotify.
