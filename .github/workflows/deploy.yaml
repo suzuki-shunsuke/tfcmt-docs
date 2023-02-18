@@ -11,9 +11,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c # v3
+    - name: get nested property
+      id: package_json
+      uses: notiz-dev/github-action-json-property@v0.2.0
+      with: 
+          path: package.json
+          prop_path: volta.node
     - uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c # v3
       with:
-        node-version: '17'
+        node-version: ${{steps.package_json.outputs.prop}}
         cache: 'npm'
     - run: npm install
     - run: npm run build
