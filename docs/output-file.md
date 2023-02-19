@@ -8,7 +8,7 @@ sidebar_position: 570
 
 :::caution
 This feature hasn't been released yet, but will be released in v4.2.0.
-You can try this feature using the prerelease version [v4.2.0-1](https://github.com/suzuki-shunsuke/tfcmt/releases/tag/v4.2.0-1).
+You can try this feature using the prerelease version [v4.2.0-2](https://github.com/suzuki-shunsuke/tfcmt/releases/tag/v4.2.0-2).
 :::
 
 tfcmt normally posts the result of `terraform plan` and `terraform apply` to GitHub Pull Requests as a comment.
@@ -26,6 +26,18 @@ tfcmt apply:
 $ tfcmt --output apply.md apply -- terraform apply
 ```
 
-When a specified file doesn't exist, the file is created.
-When the file already exist, the file content is overwritten.
+If a specified file doesn't exist, the file is created.
+If the file already exist, the file content is appended.
+
+:::tip
+If you want to overwrite the file content instead of appending, please make [the file empty](https://www.tecmint.com/empty-delete-file-content-linux/) before running tfcmt.
+
+e.g.
+
+```sh
+: > plan.md # Make the file empty
+tfcmt --output plan.md plan -- terraform plan
+```
+:::
+
 [Metadata](embedded-metadata.md) isn't embedded.
