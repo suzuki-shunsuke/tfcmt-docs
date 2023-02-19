@@ -8,7 +8,7 @@ sidebar_position: 570
 
 :::caution
 This feature hasn't been released yet, but will be released in v4.2.0.
-You can try this feature using the prerelease version [v4.2.0-1](https://github.com/suzuki-shunsuke/tfcmt/releases/tag/v4.2.0-1).
+You can try this feature using the prerelease version [v4.2.0-2](https://github.com/suzuki-shunsuke/tfcmt/releases/tag/v4.2.0-2).
 :::
 
 tfcmt normally posts the result of `terraform plan` and `terraform apply` to GitHub Pull Requests as a comment.
