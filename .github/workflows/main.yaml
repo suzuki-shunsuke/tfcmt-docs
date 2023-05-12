@@ -1,0 +1,15 @@
+---
+name: main
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    uses: ./.github/workflows/deploy.yaml
+    permissions:
+      contents: write
+    secrets:
+      gh_app_id: ${{ secrets.APP_ID }}
+      gh_app_private_key: ${{ secrets.APP_PRIVATE_KEY }}

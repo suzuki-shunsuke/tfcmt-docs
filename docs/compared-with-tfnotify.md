@@ -453,7 +453,7 @@ If the text includes <code>\`\`\`</code>, the text wraps with `<pre><code>`, oth
 * -build-url
 
 mercari/tfnotify gets these parameters from only environment variables, so you can't use mercari/tfnotify on the platform which mercari/tfnotify doesn't support.
-On the other hand, tfcmt supports specifing these parameters by command-line options, so you can use tfcmt anywhere.
+On the other hand, tfcmt supports specifying these parameters by command-line options, so you can use tfcmt anywhere.
 
 e.g.
 
