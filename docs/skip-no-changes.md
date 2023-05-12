@@ -25,6 +25,5 @@ terraform:
 
 If the option is set, `tfcmt plan` adds or updates a pull request label but doesn't post a comment if the result of `terraform plan` has no change and no warning.
 
-Without a comment you can still understand the result by a pull request label.
 Even if there are no comment, the pull request label lets you know the result.
 This feature is useful when you want to keep pull request comments clean.
