@@ -146,6 +146,7 @@ terraform:
       label: "{{if .Vars.target}}{{.Vars.target}}/{{end}}no-changes"
       label_color: 0e8a16 # green
       # disable_label: false
+      # disable_comment: false
     when_plan_error:
       label:
       label_color:
