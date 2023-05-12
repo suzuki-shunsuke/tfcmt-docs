@@ -94,7 +94,7 @@ It makes easy to understand the result of `terraform plan`.
 
 The following labels are set according to the result of `terraform plan`
 
-* no-changes: there is no resoruce to be changed
+* no-changes: there is no resource to be changed
 * add-or-update: there are resources to be created or updated but there is no resource to be destroyed or recreated
 * destroy: there are resources to be destroyed or recreated
 
