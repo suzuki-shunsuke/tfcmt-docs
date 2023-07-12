@@ -12,7 +12,7 @@ e.g. tfcmt.yaml
 
 ```yaml
 ghe_base_url: https://example.com
-ghe_graphql_endpoint: https://example.com/graphql
+ghe_graphql_endpoint: https://example.com/api/graphql
 ```
 
 * https://docs.github.com/en/enterprise-server@3.5/rest/overview/resources-in-the-rest-api#current-version
