@@ -6,7 +6,7 @@ sidebar_position: 500
 
 :::caution
 This page isn't fully maintained.
-There are some differences not described in this page.
+We stopped maintaining this page so there are some differences not described in this page.
 :::
 
 tfcmt is a fork of [mercari/tfnotify v0.7.0](https://github.com/mercari/tfnotify/releases/tag/v0.7.0).
