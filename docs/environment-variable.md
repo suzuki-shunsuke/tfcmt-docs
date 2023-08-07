@@ -4,9 +4,14 @@ sidebar_position: 300
 
 # Environment variable
 
-* GITHUB_TOKEN
-* [Native support of some CI platforms](#native-support-of-some-ci-platforms)
-* [Custom Environment Variable Definition](#custom-environment-variable-definition)
+- GITHUB_TOKEN
+- TFCMT_REPO_OWNER
+- TFCMT_REPO_NAME
+- TFCMT_SHA
+- TFCMT_PR_NUMBER
+- TFCMT_CONFIG
+- [Native support of some CI platforms](#native-support-of-some-ci-platforms)
+- [Custom Environment Variable Definition](#custom-environment-variable-definition)
 
 ## Native support of some CI platforms
 

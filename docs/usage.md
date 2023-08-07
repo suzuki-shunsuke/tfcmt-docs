@@ -6,11 +6,11 @@ sidebar_position: 600
 
 ```console
 $ tfcmt --version
-tfcmt version 3.1.1 (6e6358b49ce95b52f3287c4376bf66a3c7bc13e8)
+tfcmt version 4.4.3 (4a492ac82c59c1a60b114d4038fb5fc83bff0502)
 ```
 
 ```console
-$ tfcmt help
+$ tfcmt --help
 NAME:
    tfcmt - Notify the execution result of terraform command
 
@@ -18,7 +18,7 @@ USAGE:
    tfcmt [global options] command [command options] [arguments...]
 
 VERSION:
-   3.1.1 (6e6358b49ce95b52f3287c4376bf66a3c7bc13e8)
+   4.4.3 (4a492ac82c59c1a60b114d4038fb5fc83bff0502)
 
 COMMANDS:
    plan     Run terraform plan and post a comment to GitHub commit or pull request
@@ -27,16 +27,17 @@ COMMANDS:
    help, h  Shows a list of commands or help for one command
 
 GLOBAL OPTIONS:
-   --owner value      GitHub Repository owner name
-   --repo value       GitHub Repository name
-   --sha value        commit SHA (revision)
-   --build-url value  build url
-   --log-level value  log level
-   --pr value         pull request number (default: 0)
-   --config value     config path
-   --var value        template variables. The format of value is '<name>:<value>'  (accepts multiple inputs)
-   --help, -h         show help (default: false)
-   --version, -v      print the version (default: false)
+   --owner value                GitHub Repository owner name [$TFCMT_REPO_OWNER]
+   --repo value                 GitHub Repository name [$TFCMT_REPO_NAME]
+   --sha value                  commit SHA (revision) [$TFCMT_SHA]
+   --build-url value            build url
+   --log-level value            log level
+   --pr value                   pull request number (default: 0) [$TFCMT_PR_NUMBER]
+   --config value               config path [$TFCMT_CONFIG]
+   --var value [ --var value ]  template variables. The format of value is '<name>:<value>'
+   --output value               specify file to output result instead of post comment
+   --help, -h                   show help
+   --version, -v                print the version
 ```
 
 ### -var option
@@ -68,13 +69,18 @@ NAME:
    tfcmt plan - Run terraform plan and post a comment to GitHub commit or pull request
 
 USAGE:
-   tfcmt plan [arguments...]
+   tfcmt plan [command options] [arguments...]
+
+OPTIONS:
+   --patch            update an existing comment instead of creating a new comment. If there is no existing comment, a new comment is created. (default: false)
+   --skip-no-changes  If there is no change tfcmt updates a label but doesn't post a comment (default: false)
+   --help, -h         show help
 ```
 
 e.g.
 
 ```console
-$ tfcmt plan -- terraform plan -no-color
+$ tfcmt plan -- terraform plan
 ```
 
 ## tfcmt apply
@@ -85,23 +91,14 @@ NAME:
    tfcmt apply - Run terraform apply and post a comment to GitHub commit or pull request
 
 USAGE:
-   tfcmt apply [arguments...]
+   tfcmt apply [command options] [arguments...]
+
+OPTIONS:
+   --help, -h  show help
 ```
 
 e.g.
 
 ```console
-$ tfcmt apply -- terraform apply -auto-approve -no-color
-```
-
-## :warning: Terraform's `-no-color` option is required to parse the result properly
-
-Please set [Terraform's -no-color option](https://www.terraform.io/cli/commands/plan#no-color), otherwise tfcmt may fail to parse the result.
-
-```console
-$ tfcmt plan -- terraform plan -no-color
-```
-
-```console
-$ tfcmt apply -- terraform apply -auto-approve -no-color
+$ tfcmt apply -- terraform apply
 ```
