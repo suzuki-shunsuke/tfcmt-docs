@@ -36,6 +36,8 @@ Placeholder | Usage
 `{{ .UpdatedResources }}` | a list of updated resource paths. This variable can be used at only plan
 `{{ .DeletedResources }}` | a list of deleted resource paths. This variable can be used at only plan
 `{{ .ReplacedResources }}` | a list of deleted resource paths. This variable can be used at only plan
+`{{ .MovedResources }}` | a list of moved resource paths. This variable can be used at only plan
+`{{ .ImportedResources }}` | a list of imported resources (`{"Before": "resource path", "After": "resource path"}`). This variable can be used at only plan
 
 ## Template Functions
 
@@ -78,6 +80,14 @@ templates:
     * Replace
     {{- range .ReplacedResources}}
       * {{.}}
+    {{- end}}{{end}}{{if .ImportedResources}}
+    * Import
+    {{- range .ImportedResources}}
+      * {{.}}
+    {{- end}}{{end}}{{if .MovedResources}}
+    * Move
+    {{- range .MovedResources}}
+      * {{.Before}} => {{.After}}
     {{- end}}{{end}}
   deletion_warning: |
     {{if .HasDestroy}}

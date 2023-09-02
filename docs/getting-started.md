@@ -137,6 +137,12 @@ The following resources are listed.
 * Replace
   * recreated resource 1
   * ...
+* Import
+  * imported resource 1
+  * ...
+* Move
+  * old resource path 1 => new resource path 1
+  * ...
 
 ## tfcmt apply
 
