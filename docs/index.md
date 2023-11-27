@@ -66,6 +66,10 @@ For detail, please see [Patch `tfcmt plan` comment](plan-patch.md).
 * [2021-12-26 tfcmt - Improve Terraform Workflow with PR Comment and Label](https://dev.to/suzukishunsuke/tfcmt-improve-terraform-workflow-with-pr-comment-and-label-1kh7)
 * [2021-12-26 tfcmt で Terraform の CI/CD を改善する](https://zenn.dev/shunsuke_suzuki/articles/improve-terraform-cicd-with-tfcmt)
 
+## Who uses tfcmt?
+
+https://github.com/suzuki-shunsuke/tfcmt#who-uses-tfcmt
+
 ## License
 
 [LICENSE](https://github.com/suzuki-shunsuke/tfcmt/blob/main/LICENSE)
