@@ -78,7 +78,8 @@ jobs:
   update-aqua-checksums:
     uses: ./.github/workflows/wc-update-aqua-checksums.yaml
     needs: path-filter
-    permissions: {}
+    permissions:
+      contents: read
     secrets:
       gh_app_id: ${{secrets.APP_ID}}
       gh_app_private_key: ${{secrets.APP_PRIVATE_KEY}}
