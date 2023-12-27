@@ -4,7 +4,7 @@ sidebar_position: 300
 
 # Environment variable
 
-- GITHUB_TOKEN
+- TFCMT_GITHUB_TOKEN (tfcmt >= [v4.8.0](https://github.com/suzuki-shunsuke/tfcmt/releases/tag/v4.8.0)), GITHUB_TOKEN
 - TFCMT_REPO_OWNER
 - TFCMT_REPO_NAME
 - TFCMT_SHA
