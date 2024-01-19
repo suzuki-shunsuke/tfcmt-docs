@@ -1,18 +1,18 @@
 {
   "checksums": [
     {
-      "id": "github_release/github.com/crate-ci/typos/v1.17.1/typos-v1.17.1-x86_64-apple-darwin.tar.gz",
-      "checksum": "5740E693E489F592CDE54807F44D841FE190AC8307304A77E94437E83E5A293C",
+      "id": "github_release/github.com/crate-ci/typos/v1.17.2/typos-v1.17.2-x86_64-apple-darwin.tar.gz",
+      "checksum": "C36EF165DD68BB8D94B2B93794B229E40E7DBE3010B421BDF44046BDDD484FBE",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/crate-ci/typos/v1.17.1/typos-v1.17.1-x86_64-pc-windows-msvc.zip",
-      "checksum": "85ED4887D1518CCE6E97434939048EF4DFFC73452210ED1DE546BF36901B2191",
+      "id": "github_release/github.com/crate-ci/typos/v1.17.2/typos-v1.17.2-x86_64-pc-windows-msvc.zip",
+      "checksum": "50B2D57433999253979D9D2621B14450D6EC75EDB063E35D5706AC7733D1E43E",
       "algorithm": "sha256"
     },
     {
-      "id": "github_release/github.com/crate-ci/typos/v1.17.1/typos-v1.17.1-x86_64-unknown-linux-musl.tar.gz",
-      "checksum": "CF8744FBCACE2A221FC141C4561B242FF2A2789F73C6741386B9451A62457845",
+      "id": "github_release/github.com/crate-ci/typos/v1.17.2/typos-v1.17.2-x86_64-unknown-linux-musl.tar.gz",
+      "checksum": "54B7092403A9BA85EED3F1F17C5952CDCD18545AF0AA3D32A38A3A3B71CA8763",
       "algorithm": "sha256"
     },
     {
