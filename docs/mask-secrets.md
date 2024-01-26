@@ -24,7 +24,7 @@ Please see also [Sensitive Data in State](https://developer.hashicorp.com/terraf
 You can use environment variables `TFCMT_MASKS` and `TFCMT_MASKS_SEPARATOR`.
 
 - `TFCMT_MASKS`: A list of masks. Masks are joined by `TFCMT_MASKS_SEPARATOR`
-- `TFCMT_MASKS_SEPARATOR`: A separator of masks. The default value is `;`
+- `TFCMT_MASKS_SEPARATOR`: A separator of masks. The default value is `,`
 
 The format of each mask is `${type}:${value}`.
 `${type}` must be either `env` or `regexp`.
@@ -34,7 +34,7 @@ If `${type}` is `regexp`, `${value}` is a masked regular expression.
 e.g. Mask GitHub access tokens and the environment variable `DATADOG_API_KEY`.
 
 ```sh
-export TFCMT_MASKS='env:GITHUB_TOKEN;env:DATADOG_API_KEY;regexp:ghp_[^ ]+'
+export TFCMT_MASKS='env:GITHUB_TOKEN,env:DATADOG_API_KEY,regexp:ghp_[^ ]+'
 tfcmt plan -- terraform plan
 ```
 
@@ -47,7 +47,7 @@ export TFCMT_MASKS='env:GITHUB_TOKEN/env:DATADOG_API_KEY/regexp:ghp_[^ ]+'
 
 All matching strings are replaced with `***`.
 Replacements are done in order of `TFCMT_MASKS`, so the result depends on the order of `TFCMT_MASKS`.
-For example, if `TFCMT_MASKS` is `regexp:foo;regexp:foo.*`, `regexp:foo.*` has no meaning because all `foo` are replaced with `***` before replacing `foo.*` with `***` so `foo.*` doesn't match with anything.
+For example, if `TFCMT_MASKS` is `regexp:foo,regexp:foo.*`, `regexp:foo.*` has no meaning because all `foo` are replaced with `***` before replacing `foo.*` with `***` so `foo.*` doesn't match with anything.
 
 ## Example
 
