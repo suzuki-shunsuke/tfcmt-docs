@@ -39,9 +39,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       announcementBar: {
-        id: 'mask_secrets',
+        id: 'mask_sensitive_data',
         content:
-          '<a href="/tfcmt/mask-secrets">Mask Secrets (2024-01-26)</a>',
+          '<a href="/tfcmt/mask-sensitive-data">Mask Sensitive Data (2024-02-01)</a>',
         backgroundColor: '#7FFF00',
         textColor: '#091E42',
         isCloseable: true,
