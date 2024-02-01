@@ -38,6 +38,14 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      announcementBar: {
+        id: 'mask_sensitive_data',
+        content:
+          '<a href="/tfcmt/mask-sensitive-data">Mask Sensitive Data (2024-02-01)</a>',
+        backgroundColor: '#7FFF00',
+        textColor: '#091E42',
+        isCloseable: true,
+      },
       navbar: {
         title: 'tfcmt',
         items: [
