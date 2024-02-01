@@ -2,12 +2,12 @@
 sidebar_position: 560
 ---
 
-# Mask secrets
+# Mask sensitive data
 
 [#1083](https://github.com/suzuki-shunsuke/tfcmt/discussions/1083) [#1115](https://github.com/suzuki-shunsuke/tfcmt/pull/1115) `tfcmt >= v4.9.0`
 
-You can mask secrets in outputs of terraform.
-This feature prevents the leak of secrets.
+You can mask sensitive data in outputs of terraform.
+This feature prevents the leak of sensitive data.
 
 The following outputs are masked.
 
@@ -136,3 +136,21 @@ guarantee to take exactly these actions if you run "terraform apply" now.
 ```
 
 ![image](https://github.com/suzuki-shunsuke/tfcmt-docs/assets/13323303/7b79481b-923c-40cf-8bbb-f955b0685d1f)
+
+## Terraform sensitive input variables and outputs and sensitive function
+
+Terraform itself has features to prevent sensitive data from being leaked.
+
+- https://developer.hashicorp.com/terraform/tutorials/configuration-language/sensitive-variables
+- https://developer.hashicorp.com/terraform/language/functions/sensitive
+- https://developer.hashicorp.com/terraform/language/values/outputs#sensitive-suppressing-values-in-cli-output
+- https://developer.hashicorp.com/terraform/language/values/variables#suppressing-values-in-cli-output
+- https://www.hashicorp.com/blog/terraform-0-14-adds-the-ability-to-redact-sensitive-values-in-console-output
+- https://www.hashicorp.com/blog/announcing-hashicorp-terraform-0-15-general-availability
+
+So first you should use these features.
+But even if these features are available, it still makes sense for tfcmt to mask sensitive data.
+Please imagine the situation that platform engineers manage Terraform workflows and product teams manage Terraform codes in a Monorepo.
+Then platform engineers need to prevent sensitive data from being leaked, but if product teams forget to protect them with `sensitive` flags, sensitive data would be leaked.
+By protecting sensitive data using tfcmt, platform engineers can prevent sensitive data from being leaked while delegating the management of Terraform codes to product teams.
+tfcmt's masking feature works as a guardrail.
