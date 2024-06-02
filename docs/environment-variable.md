@@ -10,6 +10,7 @@ sidebar_position: 300
 - TFCMT_SHA
 - TFCMT_PR_NUMBER
 - TFCMT_CONFIG
+- TFCMT_DISABLE_LABEL
 - [Native support of some CI platforms](#native-support-of-some-ci-platforms)
 - [Custom Environment Variable Definition](#custom-environment-variable-definition)
 
