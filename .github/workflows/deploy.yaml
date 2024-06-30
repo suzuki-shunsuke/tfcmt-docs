@@ -9,6 +9,7 @@ on:
 
 jobs:
   deploy:
+    timeout-minutes: 30
     runs-on: ubuntu-latest
     permissions:
       contents: write # For peaceiris/actions-gh-pages
