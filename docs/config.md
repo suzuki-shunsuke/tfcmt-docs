@@ -124,6 +124,7 @@ templates:
 terraform:
   plan:
     disable_label: false
+    ignore_warning: false
     template: |
       {{template "plan_title" .}}
 
