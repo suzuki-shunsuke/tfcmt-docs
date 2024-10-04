@@ -12,14 +12,14 @@ NAME:
    tfcmt - Notify the execution result of terraform command
 
 USAGE:
-   tfcmt [global options] command [command options] 
+   tfcmt [global options] command [command options]
 
 VERSION:
-   4.9.1 (7a2e3a22abd25e095dac93e2834b87f9b9d84320)
+   4.14.0 (13b3b64b1444d528db49d60a99310bcd45993a52)
 
 COMMANDS:
-   plan     Run terraform plan and post a comment to GitHub commit or pull request
-   apply    Run terraform apply and post a comment to GitHub commit or pull request
+   plan     Run terraform plan and post a comment to GitHub commit, pull request, or issue
+   apply    Run terraform apply and post a comment to GitHub commit, pull request, or issue
    version  Show version
    help, h  Shows a list of commands or help for one command
 
@@ -31,8 +31,8 @@ GLOBAL OPTIONS:
    --log-level value            log level
    --pr value                   pull request number (default: 0) [$TFCMT_PR_NUMBER]
    --config value               config path [$TFCMT_CONFIG]
-   --var value [ --var value ]  template variables. The format of value is '<name>:<value>'
-   --output value               specify file to output result instead of post comment
+   --var value [ --var value ]  template variables. The format of value is '<name>:<value>'. You can refer to the variable in the comment and label template using {{.Vars.<variable name>}}.
+   --output value               specify file to output result instead of posting a comment
    --help, -h                   show help
    --version, -v                print the version
 ```
@@ -42,14 +42,21 @@ GLOBAL OPTIONS:
 ```console
 $ tfcmt help plan
 NAME:
-   tfcmt plan - Run terraform plan and post a comment to GitHub commit or pull request
+   tfcmt plan - Run terraform plan and post a comment to GitHub commit, pull request, or issue
 
 USAGE:
-   tfcmt plan [command options]
+   tfcmt plan [command options]  <command> <args>...
+
+DESCRIPTION:
+   Run terraform plan and post a comment to GitHub commit, pull request, or issue.
+
+   $ tfcmt [<global options>] plan [-patch] [-skip-no-changes] -- terraform plan [<terraform plan options>]
 
 OPTIONS:
-   --patch            update an existing comment instead of creating a new comment. If there is no existing comment, a new comment is created. (default: false)
-   --skip-no-changes  If there is no change tfcmt updates a label but doesn't post a comment (default: false)
+   --patch            update an existing comment instead of creating a new comment. If there is no existing comment, a new comment is created. (default: false) [$TFCMT_PLAN_PATCH]
+   --skip-no-changes  If there is no change tfcmt updates a label but doesn't post a comment (default: false) [$TFCMT_SKIP_NO_CHANGES]
+   --ignore-warning   If skip-no-changes is enabled, comment is posted even if there is a warning. If skip-no-changes is disabled, warning is removed from the comment. (default: false) [$TFCMT_IGNORE_WARNING]
+   --disable-label    Disable to add or update a label (default: false) [$TFCMT_DISABLE_LABEL]
    --help, -h         show help
 ```
 
@@ -58,10 +65,15 @@ OPTIONS:
 ```console
 $ tfcmt help apply
 NAME:
-   tfcmt apply - Run terraform apply and post a comment to GitHub commit or pull request
+   tfcmt apply - Run terraform apply and post a comment to GitHub commit, pull request, or issue
 
 USAGE:
-   tfcmt apply [command options]
+   tfcmt apply [command options]  <command> <args>...
+
+DESCRIPTION:
+   Run terraform apply and post a comment to GitHub commit, pull request, or issue.
+
+   $ tfcmt [<global options>] apply -- terraform apply [<terraform apply options>]
 
 OPTIONS:
    --help, -h  show help
