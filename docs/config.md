@@ -124,7 +124,7 @@ templates:
 terraform:
   plan:
     disable_label: false
-    ignore_warning: false
+    ignore_warning: false # tfcmt >= v4.14.0
     template: |
       {{template "plan_title" .}}
 
