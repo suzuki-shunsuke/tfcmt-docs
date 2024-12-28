@@ -7,6 +7,27 @@ sidebar_position: 200
 tfcmt provides the good default configuration and the configuration file is optional,
 but you can customize the configuration with a configuration file.
 
+## JSON Schema
+
+[#1551](https://github.com/suzuki-shunsuke/tfcmt/pull/1551)
+
+You can use JSON Schema of tfcmt's configuration file.
+
+- https://github.com/suzuki-shunsuke/tfcmt/blob/main/json-schema/tfcmt.json
+- https://raw.githubusercontent.com/suzuki-shunsuke/tfcmt/refs/heads/main/json-schema/tfcmt.json
+
+If you look for a CLI tool to validate configuration with JSON Schema, [ajv-cli](https://ajv.js.org/packages/ajv-cli.html) is useful.
+
+```sh
+ajv --spec=draft2020 -s json-schema/tfcmt.json -d tfcmt.yaml
+```
+
+### Input Complementation by YAML Language Server
+
+```yaml
+# yaml-language-server: $schema=https://raw.githubusercontent.com/suzuki-shunsuke/tfcmt/refs/heads/main/json-schema/tfcmt.json
+```
+
 ## Configuration File Path
 
 When running tfcmt, you can specify the configuration path via `--config` option (if it's omitted, the configuration file `{.,}tfcmt.y{,a}ml` is searched from the current directory to the root directory).
