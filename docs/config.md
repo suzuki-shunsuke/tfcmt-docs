@@ -24,8 +24,18 @@ ajv --spec=draft2020 -s json-schema/tfcmt.json -d tfcmt.yaml
 
 ### Input Complementation by YAML Language Server
 
+[Please see the comment too.](https://github.com/szksh-lab/.github/issues/67#issuecomment-2564960491)
+
+Version: `main`
+
 ```yaml
-# yaml-language-server: $schema=https://raw.githubusercontent.com/suzuki-shunsuke/tfcmt/refs/heads/main/json-schema/tfcmt.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/suzuki-shunsuke/tfcmt/main/json-schema/tfcmt.json
+```
+
+Or pinning version:
+
+```yaml
+# yaml-language-server: $schema=https://raw.githubusercontent.com/suzuki-shunsuke/tfcmt/v4.14.1/json-schema/tfcmt.json
 ```
 
 ## Configuration File Path
