@@ -19,11 +19,6 @@ jobs:
         id: changes
         with:
           filters: |
-            update-aqua-checksums:
-              - aqua/aqua.yaml
-              - aqua/imports/*.yaml
-              - aqua/aqua-checksums.json
-              - .github/workflows/test.yaml
             renovate-config-validator:
               - renovate.json
             ghalint:
@@ -40,7 +35,6 @@ jobs:
       - test
       - typos
       - ghalint
-      - update-aqua-checksums
     permissions: {}
     if: failure()
     steps:
@@ -62,20 +56,9 @@ jobs:
       gh_app_id: ${{secrets.APP_ID}}
       gh_app_private_key: ${{secrets.APP_PRIVATE_KEY}}
 
-  update-aqua-checksums:
-    uses: ./.github/workflows/wc-update-aqua-checksums.yaml
-    needs: path-filter
-    permissions:
-      contents: read
-    secrets:
-      gh_app_id: ${{secrets.APP_ID}}
-      gh_app_private_key: ${{secrets.APP_PRIVATE_KEY}}
-    if: |
-      needs.path-filter.outputs.update-aqua-checksums == 'true'
-
   ghalint:
     # Validate GitHub Actions Workflows by ghalint.
-    timeout-minutes: 30
+    timeout-minutes: 10
     needs: path-filter
     if: needs.path-filter.outputs.ghalint == 'true'
     runs-on: ubuntu-latest
@@ -94,7 +77,7 @@ jobs:
           GHALINT_LOG_COLOR: always
 
   typos:
-    timeout-minutes: 30
+    timeout-minutes: 10
     runs-on: ubuntu-latest
     permissions: {}
     steps:
