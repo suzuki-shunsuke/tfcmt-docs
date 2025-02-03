@@ -17,9 +17,15 @@ jobs:
         env:
           GITHUB_TOKEN: ${{github.token}}
       - run: aqua upc -prune
+      - name: get nested property
+        id: package_json
+        uses: notiz-dev/github-action-json-property@a5a9c668b16513c737c3e1f8956772c99c73f6e8 # v0.2.0
+        with:
+          path: package.json
+          prop_path: volta.node
       - uses: actions/setup-node@1d0ff469b7ec7b3cb9d8673fde0c81c44821de2a # v4.2.0
         with:
-          node-version-file: .node-version
+          node-version: ${{steps.package_json.outputs.prop}}
           cache: npm
       - run: npm i
       - run: bash scripts/generate-usage.sh

@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: ${{steps.package_json.outputs.prop}}
           cache: npm
-      - run: npm install
+      - run: npm ci
       - run: npm run build
 
       - name: Generate token
