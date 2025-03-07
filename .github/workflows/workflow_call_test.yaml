@@ -1,6 +1,13 @@
 ---
 name: test (workflow_call)
-on: workflow_call
+on:
+  workflow_call:
+    secrets:
+      APP_ID:
+        required: false
+      APP_PRIVATE_KEY:
+        required: false
+
 permissions: {}
 env:
   AQUA_LOG_COLOR: always

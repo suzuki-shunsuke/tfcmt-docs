@@ -8,8 +8,8 @@ jobs:
     permissions:
       contents: write
     secrets:
-      gh_app_id: ${{secrets.APP_ID}}
-      gh_app_private_key: ${{secrets.APP_PRIVATE_KEY}}
+      APP_ID: ${{secrets.APP_ID}}
+      APP_PRIVATE_KEY: ${{secrets.APP_PRIVATE_KEY}}
   status-check:
     runs-on: ubuntu-24.04
     if: failure()
