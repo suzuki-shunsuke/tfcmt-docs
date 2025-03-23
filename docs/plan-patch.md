@@ -38,6 +38,20 @@ $ tfcmt plan -patch=false -- terraform plan -no-color
 
 By patching the comment instead of creating a new comment, you can keep the pull request comments clean.
 
+### Using `-patch` with monorepo which contains multiple root modules (tfstate)
+
+You can specify `target` variable to tell tfcmt which comments should update:
+
+```console
+$ cd /path/to/root-modules/dev
+$ tfcmt -var 'target:dev' plan -patch -- terraform plan -no-color
+
+$ cd /path/to/root-modules/prd
+$ tfcmt -var 'target:prd' plan -patch -- terraform plan -no-color
+```
+
+See also [Monorepo support: target variable](getting-started#monorepo-support-target-variable).
+
 ### Trouble shooting
 
 If the comment isn't patched expectedly, please set `-log-level=debug`.
