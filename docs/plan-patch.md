@@ -40,7 +40,7 @@ By patching the comment instead of creating a new comment, you can keep the pull
 
 ### Using `-patch` with monorepos containing multiple root modules (tfstates)
 
-You can specify `target` variable to tell tfcmt which comments should update:
+You can specify the `target` variable to instruct tfcmt which comments should be updated:
 
 ```console
 $ cd /path/to/root-modules/dev
