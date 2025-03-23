@@ -17,7 +17,7 @@ Instead of creating a new comment, you can update existing comment. This is usef
 The option `-patch` has been added to `tfcmt plan` command.
 
 ```console
-tfcmt plan -patch -- terraform plan -no-color
+$ tfcmt plan -patch -- terraform plan -no-color
 ```
 
 And the configuration option `plan_patch` has been added.
@@ -37,6 +37,20 @@ $ tfcmt plan -patch=false -- terraform plan -no-color
 ### Motivation
 
 By patching the comment instead of creating a new comment, you can keep the pull request comments clean.
+
+### Using `-patch` with monorepos containing multiple root modules (tfstates)
+
+You can specify the `target` variable to instruct tfcmt which comments should be updated:
+
+```console
+$ cd /path/to/root-modules/dev
+$ tfcmt -var 'target:dev' plan -patch -- terraform plan -no-color
+
+$ cd /path/to/root-modules/prd
+$ tfcmt -var 'target:prd' plan -patch -- terraform plan -no-color
+```
+
+See also [Monorepo support: target variable](getting-started#monorepo-support-target-variable).
 
 ### Trouble shooting
 
