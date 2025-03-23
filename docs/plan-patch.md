@@ -17,7 +17,7 @@ Instead of creating a new comment, you can update existing comment. This is usef
 The option `-patch` has been added to `tfcmt plan` command.
 
 ```console
-tfcmt plan -patch -- terraform plan -no-color
+$ tfcmt plan -patch -- terraform plan -no-color
 ```
 
 And the configuration option `plan_patch` has been added.
