@@ -12,10 +12,10 @@ NAME:
    tfcmt - Notify the execution result of terraform command
 
 USAGE:
-   tfcmt [global options] command [command options]
+   tfcmt [global options] [command [command options]]
 
 VERSION:
-   4.14.2 (9120e07afae826dab4dc28bebd0ce1304350cc5d)
+   4.14.3 (18fee747188f9a5c7608c1e232f8610b306391f0)
 
 COMMANDS:
    plan     Run terraform plan and post a comment to GitHub commit, pull request, or issue
@@ -24,17 +24,17 @@ COMMANDS:
    help, h  Shows a list of commands or help for one command
 
 GLOBAL OPTIONS:
-   --owner value                GitHub Repository owner name [$TFCMT_REPO_OWNER]
-   --repo value                 GitHub Repository name [$TFCMT_REPO_NAME]
-   --sha value                  commit SHA (revision) [$TFCMT_SHA]
-   --build-url value            build url
-   --log-level value            log level
-   --pr value                   pull request number (default: 0) [$TFCMT_PR_NUMBER]
-   --config value               config path [$TFCMT_CONFIG]
-   --var value [ --var value ]  template variables. The format of value is '<name>:<value>'. You can refer to the variable in the comment and label template using {{.Vars.<variable name>}}.
-   --output value               specify file to output result instead of posting a comment
-   --help, -h                   show help
-   --version, -v                print the version
+   --owner string                 GitHub Repository owner name [$TFCMT_REPO_OWNER]
+   --repo string                  GitHub Repository name [$TFCMT_REPO_NAME]
+   --sha string                   commit SHA (revision) [$TFCMT_SHA]
+   --build-url string             build url
+   --log-level string             log level
+   --pr int                       pull request number (default: 0) [$TFCMT_PR_NUMBER]
+   --config string                config path [$TFCMT_CONFIG]
+   --var string [ --var string ]  template variables. The format of value is '<name>:<value>'. You can refer to the variable in the comment and label template using {{.Vars.<variable name>}}.
+   --output string                specify file to output result instead of posting a comment
+   --help, -h                     show help
+   --version, -v                  print the version
 ```
 
 ## tfcmt plan
@@ -45,7 +45,7 @@ NAME:
    tfcmt plan - Run terraform plan and post a comment to GitHub commit, pull request, or issue
 
 USAGE:
-   tfcmt plan [command options]  <command> <args>...
+   tfcmt plan  <command> <args>...
 
 DESCRIPTION:
    Run terraform plan and post a comment to GitHub commit, pull request, or issue.
@@ -68,7 +68,7 @@ NAME:
    tfcmt apply - Run terraform apply and post a comment to GitHub commit, pull request, or issue
 
 USAGE:
-   tfcmt apply [command options]  <command> <args>...
+   tfcmt apply  <command> <args>...
 
 DESCRIPTION:
    Run terraform apply and post a comment to GitHub commit, pull request, or issue.
@@ -87,7 +87,7 @@ NAME:
    tfcmt version - Show version
 
 USAGE:
-   tfcmt version [command options]
+   tfcmt version
 
 OPTIONS:
    --help, -h  show help
