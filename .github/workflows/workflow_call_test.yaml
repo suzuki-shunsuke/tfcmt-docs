@@ -1,12 +1,6 @@
 ---
 name: test (workflow_call)
-on:
-  workflow_call:
-    secrets:
-      APP_ID:
-        required: false
-      APP_PRIVATE_KEY:
-        required: false
+on: workflow_call
 
 permissions: {}
 env:
@@ -42,11 +36,7 @@ jobs:
 
   test:
     uses: ./.github/workflows/deploy.yaml
-    permissions:
-      contents: write
-    secrets:
-      gh_app_id: ${{secrets.APP_ID}}
-      gh_app_private_key: ${{secrets.APP_PRIVATE_KEY}}
+    permissions: {}
 
   ghalint:
     # Validate GitHub Actions Workflows by ghalint.

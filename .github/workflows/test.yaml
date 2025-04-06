@@ -6,10 +6,7 @@ jobs:
   test:
     uses: ./.github/workflows/workflow_call_test.yaml
     permissions:
-      contents: write
-    secrets:
-      APP_ID: ${{secrets.APP_ID}}
-      APP_PRIVATE_KEY: ${{secrets.APP_PRIVATE_KEY}}
+      contents: read
   status-check:
     runs-on: ubuntu-24.04
     if: failure()
