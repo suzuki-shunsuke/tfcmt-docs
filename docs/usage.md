@@ -15,7 +15,7 @@ USAGE:
    tfcmt [global options] [command [command options]]
 
 VERSION:
-   4.14.3 (18fee747188f9a5c7608c1e232f8610b306391f0)
+   4.14.4 (42cd4ac54a24dc1ae91b8c70271862e4618e6689)
 
 COMMANDS:
    plan     Run terraform plan and post a comment to GitHub commit, pull request, or issue
@@ -90,5 +90,6 @@ USAGE:
    tfcmt version
 
 OPTIONS:
+   --json, -j  Output version in JSON format (default: false)
    --help, -h  show help
 ```
