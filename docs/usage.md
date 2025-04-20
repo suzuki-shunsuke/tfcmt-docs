@@ -15,11 +15,12 @@ USAGE:
    tfcmt [global options] [command [command options]]
 
 VERSION:
-   4.14.4 (42cd4ac54a24dc1ae91b8c70271862e4618e6689)
+   4.14.5
 
 COMMANDS:
    plan     Run terraform plan and post a comment to GitHub commit, pull request, or issue
    apply    Run terraform apply and post a comment to GitHub commit, pull request, or issue
+   version  Show version
    version  Show version
    help, h  Shows a list of commands or help for one command
 
@@ -76,6 +77,21 @@ DESCRIPTION:
    $ tfcmt [<global options>] apply -- terraform apply [<terraform apply options>]
 
 OPTIONS:
+   --help, -h  show help
+```
+
+## tfcmt version
+
+```console
+$ tfcmt version --help
+NAME:
+   tfcmt version - Show version
+
+USAGE:
+   tfcmt version
+
+OPTIONS:
+   --json, -j  Output version in JSON format (default: false)
    --help, -h  show help
 ```
 
