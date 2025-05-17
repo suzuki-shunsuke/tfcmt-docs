@@ -16,8 +16,8 @@ Instead of creating a new comment, you can update existing comment. This is usef
 
 The option `-patch` has been added to `tfcmt plan` command.
 
-```console
-$ tfcmt plan -patch -- terraform plan -no-color
+```sh
+tfcmt plan -patch -- terraform plan -no-color
 ```
 
 And the configuration option `plan_patch` has been added.
@@ -30,8 +30,8 @@ The command line option `-patch` takes precedence over configuration file option
 
 If you want to disable patching although `plan_patch` is true, please set `-patch=false`.
 
-```console
-$ tfcmt plan -patch=false -- terraform plan -no-color
+```
+tfcmt plan -patch=false -- terraform plan -no-color
 ```
 
 ### Motivation
@@ -42,12 +42,12 @@ By patching the comment instead of creating a new comment, you can keep the pull
 
 You can specify the `target` variable to instruct tfcmt which comments should be updated:
 
-```console
-$ cd /path/to/root-modules/dev
-$ tfcmt -var 'target:dev' plan -patch -- terraform plan -no-color
+```sh
+cd /path/to/root-modules/dev
+tfcmt -var 'target:dev' plan -patch -- terraform plan -no-color
 
-$ cd /path/to/root-modules/prd
-$ tfcmt -var 'target:prd' plan -patch -- terraform plan -no-color
+cd /path/to/root-modules/prd
+tfcmt -var 'target:prd' plan -patch -- terraform plan -no-color
 ```
 
 See also [Monorepo support: target variable](getting-started#monorepo-support-target-variable).
@@ -56,8 +56,8 @@ See also [Monorepo support: target variable](getting-started#monorepo-support-ta
 
 If the comment isn't patched expectedly, please set `-log-level=debug`.
 
-```console
-$ tfcmt -log-level=debug plan -patch -- terraform plan -no-color
+```sh
+tfcmt -log-level=debug plan -patch -- terraform plan -no-color
 ```
 
 ### :warning: Note to use  tfcmt plan's patch option with github-comment hide

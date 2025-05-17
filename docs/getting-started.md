@@ -19,25 +19,25 @@ GitHub Acces Token requires the following permissions:
 
 ## Setup
 
-```console
-$ git clone https://github.com/suzuki-shunsuke/tfcmt
-$ cd tfcmt/examples/getting-started
-$ terraform init
-$ terraform validate
-$ terraform plan
+```sh
+git clone https://github.com/suzuki-shunsuke/tfcmt
+cd tfcmt/examples/getting-started
+terraform init
+terraform validate
+terraform plan
 ```
 
-```console
-$ export GITHUB_TOKEN=xxx # your personal access token
+```sh
+export GITHUB_TOKEN=xxx # your personal access token
 ```
 
 Open an issue or pull request at your repository to post comments with tfcmt.
 **Please change values properly**.
 
-```console
-$ PR_NUMBER=70
-$ OWNER=suzuki-shunsuke
-$ REPO=tfcmt
+```sh
+PR_NUMBER=70
+OWNER=suzuki-shunsuke
+REPO=tfcmt
 ```
 
 ## tfcmt plan
@@ -99,15 +99,15 @@ It makes easy to understand the result of `terraform plan`.
 
 The following labels are set according to the result of `terraform plan`
 
-* no-changes: there is no resource to be changed
-* add-or-update: there are resources to be created or updated but there is no resource to be destroyed or recreated
-* destroy: there are resources to be destroyed or recreated
+- no-changes: there is no resource to be changed
+- add-or-update: there are resources to be created or updated but there is no resource to be destroyed or recreated
+- destroy: there are resources to be destroyed or recreated
 
 The label color is configured automatically.
 
-* no-changes: green
-* add-or-update: blue
-* destroy: red
+- no-changes: green
+- add-or-update: blue
+- destroy: red
 
 ### Configuration file is optional
 
@@ -169,8 +169,8 @@ https://github.com/suzuki-shunsuke/tfcmt/pull/70#issuecomment-797856135
 
 Let's remove the resource `null_resource.foo` and run `terraform plan`.
 
-```console
-$ vi main.tf
+```sh
+vi main.tf
 ```
 
 ```tf
@@ -222,22 +222,22 @@ $ tfcmt -owner "$OWNER" -repo "$REPO" -pr "$PR_NUMBER"
 
 But on the following CI platform, tfcmt gets these parameters from the built in environment variables so you don't have to specify these arguments.
 
-* AWS CodeBuild
-* CircleCI
-* Drone
-* GitHub Actions
-* [Google Cloud Build](environment-variable.md#google-cloud-build-support)
+- AWS CodeBuild
+- CircleCI
+- Drone
+- GitHub Actions
+- [Google Cloud Build](environment-variable.md#google-cloud-build-support)
 
 AS IS
 
-```console
-$ tfcmt -owner "$OWNER" -repo "$REPO" -pr "$PR_NUMBER" plan -- terraform plan
+```sh
+tfcmt -owner "$OWNER" -repo "$REPO" -pr "$PR_NUMBER" plan -- terraform plan
 ```
 
 TO BE
 
-```console
-$ tfcmt plan -- terraform plan
+```sh
+tfcmt plan -- terraform plan
 ```
 
 Note that if tfcmt can't get the pull request number from environment variables you have to complement it.
@@ -279,8 +279,8 @@ bar/
 In the above case, you have to distinguish comments for the state `foo` and `bar`.
 By specifying the special variable `target` by `-var` argument, you can do it.
 
-```console
-$ vi main.tf
+```sh
+vi main.tf
 ```
 
 ```tf
@@ -304,5 +304,5 @@ https://github.com/suzuki-shunsuke/tfcmt/pull/70#issuecomment-797861332
 
 We can find
 
-* the target name is included in the comment title `Plan Result (foo)`
-* the target name is included in the pull request label `foo/no-changes`
+- the target name is included in the comment title `Plan Result (foo)`
+- the target name is included in the pull request label `foo/no-changes`

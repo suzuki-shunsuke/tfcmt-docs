@@ -12,17 +12,17 @@ Terragrunt supports deploying multiple Terraform modules in a single command by 
 
 :x: This doesn't work.
 
-```console
-$ tfcmt plan -- terragrunt run-all plan
+```sh
+tfcmt plan -- terragrunt run-all plan
 ```
 
 You can solve the issue by Terragrunt's [--terragrunt-tfpath](https://terragrunt.gruntwork.io/docs/reference/cli-options/#terragrunt-tfpath) option.
 
 1. Create a wrapper script of `terraform` and make it executable
 
-```console
-$ vi tfwrapper.sh
-$ chmod a+x tfwrapper.sh
+```sh
+vi tfwrapper.sh
+chmod a+x tfwrapper.sh
 ```
 
 tfwrapper.sh
@@ -48,8 +48,8 @@ fi
 
 2. Run `terragrunt run-all` with `--terragrunt-tfpath`
 
-```console
-$ terragrunt run-all plan --terragrunt-tfpath "<absolute path of tfwrapper.sh>"
+```sh
+terragrunt run-all plan --terragrunt-tfpath "<absolute path of tfwrapper.sh>"
 ```
 
 Then the result of `terraform plan` is posted per module.

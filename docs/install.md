@@ -12,22 +12,22 @@ sidebar_position: 120
 
 You can install tfcmt with [Homebrew](https://brew.sh/).
 
-```console
-$ brew install tfcmt
+```sh
+brew install tfcmt
 ```
 
 Or
 
-```console
-$ brew install suzuki-shunsuke/tfcmt/tfcmt
+```sh
+brew install suzuki-shunsuke/tfcmt/tfcmt
 ```
 
 ## aqua
 
 You can install tfcmt with [aqua](https://aquaproj.github.io/) too.
 
-```console
-$ aqua g -i suzuki-shunsuke/tfcmt
+```sh
+aqua g -i suzuki-shunsuke/tfcmt
 ```
 
 ## GitHub Releases
