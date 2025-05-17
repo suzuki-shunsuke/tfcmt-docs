@@ -10,8 +10,8 @@ You can skip posting a comment if there is no change using the command line opti
 
 e.g.
 
-```console
-$ tfcmt plan -skip-no-changes -- terraform plan
+```sh
+tfcmt plan -skip-no-changes -- terraform plan
 ```
 
 tfcmt.yaml

@@ -11,14 +11,14 @@ But tfcmt also supports outputting the result to a local file by `--output` opti
 
 tfcmt plan:
 
-```console
-$ tfcmt --output plan.md plan -- terraform plan
+```sh
+tfcmt --output plan.md plan -- terraform plan
 ```
 
 tfcmt apply:
 
-```console
-$ tfcmt --output apply.md apply -- terraform apply
+```sh
+tfcmt --output apply.md apply -- terraform apply
 ```
 
 If a specified file doesn't exist, the file is created.
