@@ -8,9 +8,14 @@ In this getting started, you can understand tfcmt's primary feature.
 
 ## Requirements
 
-* Terraform
-* [tfcmt](install)
-* GitHub Access Token
+- Terraform
+- [tfcmt](install)
+- GitHub Access Token
+
+GitHub Acces Token requires the following permissions:
+
+- Pull Requests: Write - To post comments to pull requests
+- Issues: Write - To create GitHub Issue Labels
 
 ## Setup
 
