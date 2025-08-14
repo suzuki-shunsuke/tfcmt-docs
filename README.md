@@ -4,6 +4,11 @@ Document of [tfcmt](https://github.com/suzuki-shunsuke/tfcmt) powered by [Docusa
 
 https://suzuki-shunsuke.github.io/tfcmt/
 
+## :warning: This repository was archived :warning:
+
+The document was moved to https://github.com/suzuki-shunsuke/tfcmt/tree/main/site
+This improves the maintainability and empowers AI.
+
 ## Run at localhost
 
 ```console
